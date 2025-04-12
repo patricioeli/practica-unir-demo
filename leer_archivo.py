@@ -94,8 +94,15 @@ def generar_reporte(deudas, transacciones):
     print(f"{'CLIENTE':<30} {'TOTAL DEUDA':>15}")
     print("-"*60)
     
+    
+    totalGeneral = 0
     for cliente, total in sorted(deudas.items(), key=lambda x: x[1], reverse=True):
         print(f"{cliente:<30} ${total:>12,.2f}")
+        totalGeneral = totalGeneral + total
+    print("="*60)
+    print("\nTOTAL GENERAL:")
+    print(totalGeneral)
+    print("="*60)
     
     print("\nDETALLE DE TRANSACCIONES:")
     print("="*60)
