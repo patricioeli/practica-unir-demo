@@ -55,7 +55,7 @@ def procesar_csv_deudas(nombre_archivo):
                         continue  # Salta fechas de otros años o formatos no reconocidos
                     
                     print ('datos ok')
-                    
+                    # oli q ace
                     deudas[cliente] += deuda
                     transacciones.append({
                         'cliente': cliente,
